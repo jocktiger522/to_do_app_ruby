@@ -3,7 +3,7 @@
     color: orange;
 }
 body {
-    background-color: indigo;
+    background-color: rgb(161,158,238);
     color: grey;
 }
 marquee {
@@ -49,4 +49,7 @@ span {
     color: white;
     padding: 5px;
     border-radius: 18px ;
+}
+a {
+    color: indigo;
 }
