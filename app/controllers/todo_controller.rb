@@ -1,7 +1,17 @@
 class TodoController < ApplicationController
     def index 
     end
+    def new
+    end
+    def create
+        t=Todo.new
+        t.description=params['description']
+        t.pomodoro_estimate=params['pomodoro_estimate']
+        t.save
+        redirect_to "/todo/show/#{t.id}"
+    end
     def show
+        @todo=Todo.find_by_id(params[:id])
         @todo_pomodoro_estimate = "900"
         todo_id = params[:id] 
         if todo_id == '1'
@@ -25,6 +35,8 @@ class TodoController < ApplicationController
         elsif todo_id == '7'
             @todo_description = "fallout76day2"
             @todo_pomodoro_estimate = "900000"
+        
+            
         
         end
     end
