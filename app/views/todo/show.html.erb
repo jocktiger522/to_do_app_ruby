@@ -4,9 +4,9 @@
 <input type = "checkbox">
 <a href = "/todo/index"> previous page ...</a>
 <hr>
-<a href = "#"> edit</a>
+<a href = "/todo/edit/<%=@todo.id%>"> edit</a>
 <hr>
-<a href = "#"> delete</a>
+<a href = "/todo/destroy/<%=@todo.id%>"> delete</a>
 <%=@todo_description%>
 <h3> <%=params[:id] %> </h3>
 <h3><%=@todo.description %> </h3>

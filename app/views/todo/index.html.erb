@@ -1,6 +1,14 @@
   <h1>Welcome to Tiger's <span class="span1">To-Do!</span></h1>
             
-            <ul>
+            <ul> <% @todos.each do |todo| %>
+  <li>
+    <input type="checkbox" name=""/>
+    <a href="show/<%= todo.id %>"><%= todo.description %></a>
+    <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
+  </li>
+<% end %> 
+
+        <a href="/todo/new"> Add New Task</a>
                 category
                 <marquee> Pending <span class="span2"> assignment</span> due</marquee>
                 <hr>
